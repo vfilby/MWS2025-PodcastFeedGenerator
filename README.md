@@ -28,7 +28,7 @@ The tool works by:
 1. Clone this repository:
 ```bash
 git clone <repository-url>
-cd MWS2025
+cd MWS2025-PodcastFeedGenerator
 ```
 
 2. Create and activate a virtual environment:
