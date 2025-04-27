@@ -2,7 +2,7 @@
 
 ⚠️ **IMPORTANT: This tool requires valid Migraine World Summit login credentials and an active subscription. This is not a way to circumvent paying for access to the summit content. The tool is designed to help organize and access content you have already paid for through the official channels.**
 
-This project provides a more convenient way to listen to Migraine World Summit 2025 talks by converting them into a podcast feed. While the summit content is available through the official website, accessing it through a podcast player offers several advantages:
+This project provides a more convenient way to listen to Migraine World Summit 2025 talks by converting them into a private podcast feed. While the summit content is available through the official website, accessing it through a podcast player offers several advantages:
 
 - **Better Mobile Experience**: Listen on the go without needing to log in through a web browser
 - **Improved Car Integration**: Use your car's media controls and display instead of fiddling with a mobile browser
@@ -12,7 +12,7 @@ This project provides a more convenient way to listen to Migraine World Summit 2
 - **Background Play**: Keep listening while using other apps on your phone
 
 The tool works by:
-1. Scraping the available talks from the Migraine World Summit website
+1. Fetching the talk metadata from the Migraine World Summit website
 2. Converting them into a podcast feed format
 3. Allowing you to subscribe to this feed in your favorite podcast player
 
@@ -48,6 +48,7 @@ pip install -r requirements.txt
 ```
 
 4. Install ChromeDriver:
+   - This step is alittle unusual but since their are dynamic elements that are loaded on demand, an active browser with selenium is used.
    - Download ChromeDriver from [https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads)
    - Make sure the version matches your Chrome browser version
    - Place the ChromeDriver executable in your system PATH or in the project directory
@@ -79,7 +80,7 @@ This script will:
 - Save the feed to `mws2025_podcast.xml`
 
 ### Step 3: Host the Podcast Feed
-To make your podcast feed accessible to your podcast player, you'll need to host the `mws2025_podcast.xml` file at a URL that your podcast player can access. For privacy and security reasons, we recommend using a private hosting solution rather than a publicly discoverable one.
+To make your podcast feed accessible to your podcast player, you'll need to host the `mws2025_podcast.xml` file at a URL that your podcast player can access. For privacy and security reasons, use a private hosting solution rather than a publicly discoverable one.
 
 1. **Amazon S3 Bucket (Recommended)**:
    - Create a new S3 bucket
